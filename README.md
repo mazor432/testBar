@@ -16,7 +16,7 @@ Download all files. Necessary: `widget.js`, `widget_style.css`
 File `index.html` is for testing and for example of use. **Is not required**.
 
 ### Step 2
-Add file with style to your page.     
+Add file with style to your page. 
 `<link rel="stylesheet" href="widget_style.css">`
 
 ### Step 3
