@@ -10,6 +10,9 @@ class Bar {
         buttonShow.classList.add('button-show');
 
     }
+    defaultCallback() {
+        alert('Hello World');
+    }
 
     createBar() {
         const bar = document.createElement('div');
@@ -26,9 +29,13 @@ class Bar {
                 bar.classList.add('bar--bottom');
                 break;
         }
-        bar.innerHTML = `<p>${this.message}</p>`
+        bar.innerHTML = `<p>${this.message}</p>`;
+        const buttonGetElement = document.createElement('button');
+        buttonGetElement.textContent = 'Get widgets';
+        buttonGetElement.classList.add('button-warning');
+        buttonGetElement.onlick = this.defaultCallback;
 
-
+        bar.appendChild(buttonGetElement)
         document.body.appendChild(bar);
     }
 

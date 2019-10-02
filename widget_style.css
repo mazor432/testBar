@@ -2,8 +2,6 @@
     position: absolute;
     display: block;
     max-height: 150px;
-    /* align-items: center; */
-    /* justify-content: center; */
     text-align: center;
     background-color: #353F4C;
     color: #FFFFFF
@@ -33,4 +31,14 @@
 
 .fadein {
     max-height: 150;
+}
+
+.button-warning {
+    margin: 0 0 10px 0;
+    height: 30px;
+    border-radius: 2px;
+    background-color: #F0BB2F;
+    text-decoration: none;
+    border: none;
+    outline: none;
 }
