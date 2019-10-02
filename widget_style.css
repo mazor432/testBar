@@ -1,0 +1,36 @@
+.bar {
+    position: absolute;
+    display: block;
+    max-height: 150px;
+    /* align-items: center; */
+    /* justify-content: center; */
+    text-align: center;
+    background-color: #353F4C;
+    color: #FFFFFF
+}
+
+.bar--top {
+    right: 0;
+    top: 0;
+    left: 0
+}
+
+.bar--bottom {
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.button-show {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.fadeout {
+    max-height: 0;
+}
+
+.fadein {
+    max-height: 150;
+}
