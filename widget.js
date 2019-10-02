@@ -1,15 +1,14 @@
 class Bar {
-    constructor({ message, position }) {
+    constructor({ message, position, callback }) {
         this.message = message;
         this.position = position;
-
-
+        callback ? this.callback = callback : this.callback = this.defaultCallback
         this.createBar();
         const buttonShow = document.getElementById('button-show');
         buttonShow.onclick = this.showBar;
         buttonShow.classList.add('button-show');
-
     }
+
     defaultCallback() {
         alert('Hello World');
     }
@@ -19,13 +18,13 @@ class Bar {
         bar.classList.add('fadeout');
         bar.classList.remove('fadein');
     }
+
     showBar() {
         const bar = document.getElementById('bar')
         if (bar.classList.contains('fadeout')) {
             bar.classList.remove('fadeout')
             bar.classList.add('fadein')
         }
-
     }
 
     createBar() {
@@ -33,7 +32,6 @@ class Bar {
         bar.id = "bar";
         bar.classList.add('bar');
         bar.classList.add('fadeout');
-
 
         switch (this.position) {
             case 'top':
@@ -47,7 +45,7 @@ class Bar {
         const buttonGetElement = document.createElement('button');
         buttonGetElement.textContent = 'Get widgets';
         buttonGetElement.classList.add('button-warning');
-        buttonGetElement.onclick = this.defaultCallback;
+        buttonGetElement.onclick = this.callback;
 
         const buttonClose = document.createElement('button');
         buttonClose.textContent = 'X';
@@ -59,6 +57,4 @@ class Bar {
 
         document.body.appendChild(bar);
     }
-
-
 }
