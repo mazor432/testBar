@@ -1,6 +1,5 @@
 .bar {
     position: absolute;
-    display: block;
     max-height: 150px;
     text-align: center;
     background-color: #353F4C;
@@ -25,12 +24,18 @@
     left: 50%;
 }
 
+.fadein, .fadeout {
+    overflow-y: hidden;
+    transition-property: all;
+    transition-duration: .4s;
+}
+
 .fadeout {
     max-height: 0;
 }
 
 .fadein {
-    max-height: 150;
+    max-height: 150px;
 }
 
 .button-warning {
@@ -41,4 +46,38 @@
     text-decoration: none;
     border: none;
     outline: none;
+}
+
+.button-close {
+    position: absolute;
+    right: 10px;
+    margin: 5px 0 0 0;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    background-color: #353F4C;
+    color: #FFFFFF
+}
+
+p {
+    padding: 0 5px;
+}
+
+@media (min-width: 576px) {
+    .bar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .button-warning {
+        margin: 0 0 0 10px;
+    }
+    .button-close {
+        position: absolute;
+        right: 40px;
+        margin: 0;
+        top: unset;
+        font-weight: normal;
+    }
 }

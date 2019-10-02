@@ -14,6 +14,20 @@ class Bar {
         alert('Hello World');
     }
 
+    closeBar() {
+        const bar = document.getElementById('bar');
+        bar.classList.add('fadeout');
+        bar.classList.remove('fadein');
+    }
+    showBar() {
+        const bar = document.getElementById('bar')
+        if (bar.classList.contains('fadeout')) {
+            bar.classList.remove('fadeout')
+            bar.classList.add('fadein')
+        }
+
+    }
+
     createBar() {
         const bar = document.createElement('div');
         bar.id = "bar";
@@ -33,18 +47,18 @@ class Bar {
         const buttonGetElement = document.createElement('button');
         buttonGetElement.textContent = 'Get widgets';
         buttonGetElement.classList.add('button-warning');
-        buttonGetElement.onlick = this.defaultCallback;
+        buttonGetElement.onclick = this.defaultCallback;
 
-        bar.appendChild(buttonGetElement)
+        const buttonClose = document.createElement('button');
+        buttonClose.textContent = 'X';
+        buttonClose.classList.add('button-close');
+        buttonClose.onclick = this.closeBar;
+
+        bar.appendChild(buttonGetElement);
+        bar.appendChild(buttonClose);
+
         document.body.appendChild(bar);
     }
 
-    showBar() {
-        const bar = document.getElementById('bar')
-        if (bar.classList.contains('fadeout')) {
-            bar.classList.remove('fadeout')
-            bar.classList.add('fadein')
-        }
 
-    }
 }
