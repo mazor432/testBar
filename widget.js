@@ -1,3 +1,4 @@
+// Trigger is not part of Bar and I think better way is creating this in DOM. Code will be more universal by the client.
 class Bar {
     constructor({ message, position, callback }) {
         this.message = message;
