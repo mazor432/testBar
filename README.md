@@ -38,7 +38,6 @@ Create and configure testBar.
             position: 'bottom',
         })
     </script>```
-
 ***Example with customized  callback method of `get widgets` button.***
 
 ```javascript
