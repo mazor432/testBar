@@ -37,7 +37,9 @@ Create and configure testBar.
             message: 'Add beautiful widgets to your website ',
             position: 'bottom',
         })
-    </script>```
+    </script>
+```
+
 ***Example with customized  callback method of `get widgets` button.***
 
 ```javascript
@@ -51,7 +53,8 @@ Create and configure testBar.
             position: 'bottom',
 			callback: myCallback
         })
-    </script>```
+    </script>
+```
 
 
 
